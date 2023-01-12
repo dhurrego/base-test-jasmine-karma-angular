@@ -1,12 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+import { DebugElement } from '@angular/core';
+import { By } from '@angular/platform-browser';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        FormsModule
       ],
       declarations: [
         AppComponent
@@ -14,22 +18,21 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
-  it('should create the app', () => {
+  it('deberia crear el componente AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'base-test-jasmine-karma'`, () => {
+  it('probando cambios title en h2 ngModel', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('base-test-jasmine-karma');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
+    const componente = fixture.componentInstance;
+    const htmlElemento: DebugElement = fixture.debugElement.query(By.css('h2'));
+    componente.title = 'Casa sofka';
     fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('base-test-jasmine-karma app is running!');
+    expect(htmlElemento.nativeElement.innerHTML).toBe('Casa sofka');
+    componente.title = 'Estoy en casa';
+    fixture.detectChanges();
+    expect(htmlElemento.nativeElement.innerHTML).toBe('Estoy en casa');
   });
 });
