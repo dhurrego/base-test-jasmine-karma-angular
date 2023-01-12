@@ -1,27 +1,19 @@
-# BaseTestJasmineKarma
+## Reto práctico:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.0.
+Con base en el proyecto alojado en GitHub [https://github.com/DonPerryDev/base-test](https://github.com/DonPerryDev/base-test)
 
-## Development server
+Se construyen las pruebas unitarias realizadas durante el curso y se agregan otras adicionales, validando que la totalidad de las pruebas hayan sido satisfactorias y que la cobertura sea del 100%:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![imagen](https://user-images.githubusercontent.com/74796784/212139633-61db693a-c2e0-44e7-81d2-78b7c201c489.png)
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Cobertura:
 
-## Build
+![imagen](https://user-images.githubusercontent.com/74796784/212139592-43ab1eb9-5995-4fd7-990e-2149d17f5400.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![imagen](https://user-images.githubusercontent.com/74796784/212139617-b78b9630-d7a0-4f12-be38-fe1f4be1843f.png)
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Imagen del codigo fuente:
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![imagen](https://user-images.githubusercontent.com/74796784/212139654-e84ddb98-bde1-467a-81e7-3f078b2cc599.png)
